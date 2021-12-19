@@ -1,13 +1,9 @@
 # CLIPA
 
 
-Welcome to view source code for CLIPA!
+Welcome to view source code of CLIPA!
 
-!!! ALL necessary files and scripts is open for every users. However, due to the file size limitation of github, the dataset( mainly *.RData ) can't be uploaded here. You can get the urls of all RDatas in urls.txt.
-
-CLIPA dependents on php and Rscript. 
-
-It could running on any web server, like apache and IIS.
+!!! ALL necessary files and scripts are open for every users. However, due to the file size limitation of github, the dataset( mainly *.RData ) can't be uploaded here. You can get the urls of all RDatas in urls.txt. It could running on any web server, like apache or IIS.
 
 Steps to get CLIPA running on Debian 10 for example:
 
@@ -29,7 +25,7 @@ Steps to get CLIPA running on Debian 10 for example:
    
    systemctl restart apache2
 
-5. Install latest R:
+5. Install the latest R:
 
    NOTE: 'apt -y install r-base' will not install the latest R. One can follow the steps below to install the latest R:
       
@@ -57,6 +53,7 @@ Steps to get CLIPA running on Debian 10 for example:
          
 6. Put source codes into /var/www/html/
          
+7. Download additional RDatas. Urls are listed in urls.txt.
          
-Hope you enjoy it!
+##Hope you enjoy it!
          

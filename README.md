@@ -55,5 +55,5 @@ Steps to get CLIPA running on Debian 10 for example:
          
 7. Download additional RDatas. Urls are listed in urls.txt.
          
-##Hope you enjoy it!
+## Hope you enjoy it!
          

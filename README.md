@@ -1,5 +1,5 @@
 # CLIPA
-Patient-derived Cancer Cell Line Interactive Pharmacogenomic Analyses
+
 
 Welcome to view source code for CLIPA!
 

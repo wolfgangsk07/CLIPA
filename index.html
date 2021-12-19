@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!--link rel="stylesheet" type="text/css" href="css/index.css?"+Math.random()-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CLIPA</title>
+	<!-- script type="text/javascript" src="js/functions.js?"+Math.random()></script -->
+	<script>
+		document.write("<script type='text/javascript' src='js/functions.js?ver="+Math.random()+"'><\/script>");
+		document.write("<script type='text/javascript' src='js/home.js?ver="+Math.random()+"'><\/script>");
+		document.write("<script type='text/javascript' src='js/plot.js?ver="+Math.random()+"'><\/script>");
+		document.write("<script type='text/javascript' src='js/svg.min.js?ver="+Math.random()+"'><\/script>");
+	</script>
+	<script>
+		document.write("<link rel='stylesheet' type='text/css' href='css/index.css?ver="+Math.random()+"'>");
+		document.write("<link rel='stylesheet' type='text/css' href='css/home.css?ver="+Math.random()+"'>");
+	</script>
+
+</head>
+<body style="visibility:hidden">
+	<div id="modifyData" style="position:fixed;top:0;left:0;z-index:100;color:red;"></div>
+	<nav>
+		<div class="header">
+			<p style="font-size:45px;font-weight:bold;margin-right:10px;margin-left:auto;">CL<span style="color:red">I</span>PA</p>
+			<p style="margin-bottom:10px;margin-right:auto;">Patient-derived Cancer Cell Line Interactive Pharmacogenomic Analyses</p>
+			<div class="Contact_father">
+				<div class="Contact" onmouseenter="expandHelp(this)" onmouseleave="shrinkHelp(this)">
+					<div class="helpInfoTitle contactus">
+						<p>Contact Us</p>
+					</div>
+					<div class="helpInfoContent">
+						<p><span style="font-weight:bold">Author</span>: Ganxun Li</p>
+						<p><span style="font-weight:bold;margin-top:5px">Email</span>: ganxunli@foxmail.com</p>
+						<p style="margin-top:5px"><span style="font-weight:bold">Affiliation</span>: Hepatic Surgery Center and Hubei Key Laboratory of Hepato-Biliary-Pancreatic Diseases, Tongji Hospital, Tongji Medical College, Huazhong University of Science and Technology, Wuhan, Hubei, China.</p>
+						<p style="margin-top:20px"><span style="font-weight:bold">Author</span>: Dongyi Wan</p>
+						<p style="margin-top:5px"><span style="font-weight:bold">Email</span>: wolfgangsk07@gmail.com</p>
+						<p style="margin-top:5px"><span style="font-weight:bold;">Affiliation</span>: Nuclear Medicine, Tongji Hospital, Tongji Medical College, Huazhong University of Science and Technology, Wuhan, Hubei, China.</p>
+						<p style="font-style:italic;margin-top:20px;">We welcome any suggestions or bug report, please feel free to contact any of us.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="modelsTips">
+			<!--div id="modelsTipBg"></div-->
+			<div class="dataBaseTip" style="border-top: 5px solid rgba(255, 0, 0, 0.5);"><label name="NATIVE,HOME" onclick=switchModel(this)><p>HOME</p></label></div>
+			<div class="dataBaseTip"><label name="NATIVE,DOWNLOAD" onclick=switchModel(this)><p>DOWNLOAD</p></label></div>
+			<div class="dataBaseTip"><label name="NATIVE,HELP" onclick=switchModel(this) id="DebugTips"><p>HELP</p></label></div>
+		</div>
+	</nav>
+	<main id="main">
+		<div class="Model native HELPHOME" id="NATIVE,HOME">
+			<p style="font-weight:bold;font-size:36px;margin:50px auto 0 auto;text-align: center;">Welcome to the CLIPA Portal!</p>
+			<div class="homeblock">
+				<div class="homeblock_title">INTRODUCTION</div>
+				<div class="homeblock_content">
+					<p>CLIPA is a newly developed interactive and easy-to-use web server for comprehensively characterizing the landscape of pharmacogenomic interactions and easily visualizing the pharmacogenomic profiles in preclinical cancer models, on the basis of multi-omics and drug response profiles originated from three public available databases, including:</p>
+					<ul style="font-size:14px;">
+						<li><p>6 omics, 992 cell lines from 28 cancer types, 173 drugs from <span style="font-style:italic;">GDSC;</span></p></li>
+						<li><p>12 omics, 1773 cell lines from 34 cancer types and 22 drugs from <span style="font-style:italic;">DepMap;</span></p></li>
+						<li><p>8 omics, 60 cell lines from 9 cancer types and 695 drugs from <span style="font-style:italic;">NCI60.</span></p></li>
+					</ul>
+
+					<p style="margin-top:2em;">The CLIPA portal provides interactive and customizable functions including:</p>
+					<ul style="font-size:14px;">
+					<li><p>cross-cancer report for 13 omics;</p></li>
+					<li><p>cancer subtypes classification;</p></li>
+					<li><p>gene enrichment analysis;</p></li>
+					<li><p>gene fusion query;</p></li>
+					<li><p>multi-omics (trans- and cis-) regulatory landscape presentation;</p></li>
+					<li><p>pharmacogenomic correlation analysis;</p></li>
+					</ul>
+
+					<p style="margin-top:2em;">With just simple clicks through CLIPA, this portal will significantly accelerate data mining in wide tumor biological research areas for biomarker discovery, drug repurposing, and precision treatment.</p>
+					<p style="margin-top:2em;">The outputs from all analyses including tables (csv) and high-resolution figures (pdf, tiff, svg, and eps) can be easily downloaded from CLIPA.</p>
+					<p style="margin-top:2em;">This website is available freely for all users without any login requirement.</p>
+				</div>
+			</div>
+			<div class="homeblock">
+				<div class="homeblock_title">DATA STATISTICS</div>
+				<div class="homeblock_content">
+					<div class="dataBrief">
+						<p>Features:</p>
+						<ul style="font-size:14px;">
+							<li><p>Advanced filters for model selection</p></li>
+							<li><p>Detailed annotations including cell lines, genes and drugs;</p></li>
+							<li><p>Detailed clinical and biological features, inluding age, gender, ploid, microsatellite status, mutational burden, culture type, culture medium and so on;</p></li>
+							<li><p>Models mapped to external databases and resources by weblinks;</p></li>
+							<li><p>User-defined cohorts with cell line selector.</p></li>
+						</ul>
+					</div>
+					<div class="diagram">
+						
+					</div>
+				</div>
+			</div>
+			<div class="homeblock">
+				<div class="homeblock_title">DATA ANALYTIC MODULES</div>
+				<div class="homeblock_content">
+					<div class="modelFunctions">
+						<p>1.<span>Cancer Types Summary</span> module allows users to assess the alteration frequency for omics with discrete settings (e.g. CNV or somatic mutation) or expression abundance for ones with continuous settings (e.g. mRNA and so on) of a specific input gene across multiple cancer types.<p>
+						<p>2.<span>Drug-Omics</span> module is aimed to investigate the correlation between the omics level of user-input gene and the response of all selected drugs across user-defined cell lines.<p>
+						<p>3.<span>Drug-Pathway</span> module is designed to explore the association between the activity of a specific pathway and the response of all selected drugs across user-defined cell lines.<p>
+						<p>4.<span>Cancer Subtypes</span> module provide a unsupervised clustering analysis for identifying cancer subtypes from raw data to result visualisation based on user-defined geneset.<p>
+						<p>5.<span>Omics-Omics (cis-regulation)</span> module is developed to investigate the correlation among the multi-omics level of a specific user-input gene.<p>
+						<p>6.<span>Omics-Omics (trans-regulation)</span> module is aimed to estimate the association among various user-input genes from same or different omics.<p>
+						<p>7.<span>Fusions</span> module provide a comprehensive gene fusion landscape of the user-defined cell line.<p>
+					</div>
+				</div>
+			</div>
+			<div class="homeblock">
+				<div class="homeblock_title">USEFUL LINKS
+				</div>
+				<div class="homeblock_content" style="display:flex;flex-flow:row;">
+					<div class="webLinks">
+						<a href="https://pubchem.ncbi.nlm.nih.gov/"  title="Pubchem" target="_blank"><img src="/CLIPA/others/Pubchem.svg"></img></a>
+						<a href="https://www.genenames.org/" title="HGNC" target="_blank"><img src="/CLIPA/others/HGNC.svg"></img></a>
+						<a href="https://www.cancerrxgene.org/" title="GDSC" target="_blank"><img src="/CLIPA/others/GDSC.png"></img></a>
+						<a href="https://depmap.org/" title="DepMap" target="_blank"><img src="/CLIPA/others/DepMap.png"></img></a>
+						<a href="http://www.gsea-msigdb.org" title="MSigDB" target="_blank"><img src="/CLIPA/others/MSigDB.gif"></img></a>
+						<a href="https://dtp.cancer.gov/discovery_development/nci-60/" title="NCI60" target="_blank"><img src="/CLIPA/others/NCI60.png"></img></a>
+					</div>
+					<div class="visitRecords">
+					
+					</div>
+				</div>
+				
+			</div>
+			<div class="footer" style="padding:1em;">
+				<p style="text-align: center;font-size:12px;">HUST All Rights Reserved © 2021</p>
+				<p style="text-align: center;font-size:12px;">The CLIPA portal is an interactive resource that allows users to visualize and download the pharmacogenomic profiles for analysis.</p>
+			</div>
+		</div>
+
+		<div class="Model native" id="NATIVE,DOWNLOAD" style="display:none">
+			<div class="downloadblock_div">
+				<div class="downloadblock">
+					<p>Downloads for GDSC:</p>
+					<table>
+						<tr><td>content1</td><td><a href=http://www.baidu.com/>test.RData</a></td><td>2021-01-01 00:00</td></tr>
+						<tr><td>content2</td><td><a href=http://www.baidu.com/>test.xlsx</a></td><td>2021-01-01 00:00</td></tr>
+						<tr><td>content3</td><td><a href=http://www.baidu.com/>test.txt</a></td><td>2021-01-01 00:00</td></tr>
+					</table>
+				</div>
+				<div class="downloadblock">
+					<p>Downloads for DepMap:</p>
+					<table>
+						<tr><td>content1</td><td><a href=http://www.baidu.com/>test.txt</a></td><td>2021-01-01 00:00</td></tr>
+						<tr><td>content2</td><td><a href=http://www.baidu.com/>test.txt</a></td><td>2021-01-01 00:00</td></tr>
+						<tr><td>content3</td><td><a href=http://www.baidu.com/>test.txt</a></td><td>2021-01-01 00:00</td></tr>
+					</table>
+				<div class="downloadblock">
+				</div>
+					<p>Downloads for NCI60:</p>
+					<table>
+						<tr><td>content1</td><td><a href=http://www.baidu.com/>test.RData</a></td><td>2021-01-01 00:00</td></tr>
+						<tr><td>content2</td><td><a href=http://www.baidu.com/>test.RData</a></td><td>2021-01-01 00:00</td></tr>
+						<tr><td>content3</td><td><a href=http://www.baidu.com/>test.RData</a></td><td>2021-01-01 00:00</td></tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="Model native HELPMODEL" id="NATIVE,HELP" style="display:none;">
+			
+		</div>
+	</main>
+	<div id="popupInfoBox">
+		<div id="popupInfoBoxBg"></div>
+		<div id="popupInfoBoxContent" class="popupInfoBoxContent"></div>
+	</div>
+	<div id="popupInfoBoxContent_tmp" class="popupInfoBoxContent"></div>
+	<div id="promotBox"></div>
+
+
+
+</body>
+<script>
+		document.write("<script type='text/javascript' src='js/postload.js?ver="+Math.random()+"'><\/script>");
+	</script>
+</html>

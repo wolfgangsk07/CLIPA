@@ -3,7 +3,7 @@ Patient-derived Cancer Cell Line Interactive Pharmacogenomic Analyses
 
 Welcome to view source code for CLIPA!
 
-!!! ALL necessary files and scripts is open for every users. However, due to file size limitation, the dataset( mainly *.RData ) are not here, you will find them on download module of http://www.hbpding.com/CLIPA.
+!!! ALL necessary files and scripts is open for every users. However, due to file size limitation, the dataset( mainly *.RData ) are not here. One get the urls of all RDatas in urls.txt.
 
 CLIPA dependents on php and Rscript. 
 

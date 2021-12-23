@@ -49,7 +49,41 @@ Steps to get CLIPA running on Debian 10 for example:
          
       5. Input 'R' to enter R console and install the following packages:
       
-         rjson, GSVA, dplyr, impute, cluster, reshape2, tidyr, stringr, caret, randomForest, e1071, kknn, rpart, gbm, adabag, glmnet, nnet, pROC
+            adabag 4.2
+
+            caret 6.0-89
+
+            cluster 2.1.2
+
+            dplyr 1.0.7
+
+            e1071 1.7-7 
+
+            gbm 2.1.8 
+
+            glmnet 4.1-2 
+
+            GSVA 1.40.1  
+
+            IlluminaHumanMethylation450kanno.ilmn12.hg19 0.6.0 
+
+            impute 1.66.0 
+
+            kknn 1.3.1    
+
+            nnet 7.3-16
+
+            pROC 1.18.0
+
+            randomForest 4.6-14 
+
+            reshape2 1.4.4
+
+            rjson 0.2.20 
+
+            rpart 4.1-15
+
+            stringr 1.4.0tidyr 1.1.3
          
 6. Put source codes into /var/www/html/
          
